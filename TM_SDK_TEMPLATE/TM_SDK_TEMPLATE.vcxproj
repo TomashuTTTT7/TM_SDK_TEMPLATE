@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup Label="Globals">
+        <VCProjectVersion>16.0</VCProjectVersion>
+        <ProjectGuid>{072345F5-9B50-4B34-81DB-A9B60E22C1D5}</ProjectGuid>
+        <Keyword>Win32Proj</Keyword>
+        <RootNamespace>TM_SDK_TEMPLATE</RootNamespace>
+        <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+        <ProjectName>TM_SDK_TEMPLATE</ProjectName>
+        <CharacterSet>Unicode</CharacterSet>
+        <PlatformToolset>v143</PlatformToolset>
+        <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    </PropertyGroup>
+    <PropertyGroup Label="Configuration">
+        <ConfigurationType>DynamicLibrary</ConfigurationType>
+    </PropertyGroup>
+    <Import Project="..\TM_SDK\TM_SDK\src_shared\TM_SDK.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+    <ImportGroup Label="Shared">
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform_Actual).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform_Actual).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros" />
+    <PropertyGroup Label="Vcpkg">
+        <VcpkgEnabled>false</VcpkgEnabled>
+    </PropertyGroup>
+    <ItemGroup>
+        <ClInclude Include="FileInfo.h" />
+        <ClInclude Include="pch.h" />
+    </ItemGroup>
+    <ItemGroup>
+        <ClCompile Include="main.cpp" />
+        <ClCompile Include="pch.cpp">
+            <PrecompiledHeader>Create</PrecompiledHeader>
+        </ClCompile>
+    </ItemGroup>
+    <Import Project="..\TM_SDK\TM_SDK\src_shared\TM_SDK.targets" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+</Project>
