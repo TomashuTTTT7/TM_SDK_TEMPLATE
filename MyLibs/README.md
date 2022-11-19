@@ -1,6 +1,6 @@
-# Librarires in TM_SDK_TEMPLATE
+# Libraries in TM_SDK_TEMPLATE
 
-## Static Libraries
+## Static libraries
 
 | library | version |
 | ------- | ------- |
